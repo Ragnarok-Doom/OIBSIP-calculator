@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="input" id="input"></div>
+      <div class="result" id="result"></div>
+    </div>
+    <div class="buttons">
+    <!-- Function Buttons -->
+    <button class="func-group" onclick="handleClick('(')">(</button>
+    <button class="func-group" onclick="handleClick(')')">)</button>
+    <button class="func-group" onclick="handleClick('π')">π</button>
+    <button class="func-group" onclick="handleBackspace()">del</button>
+    <button class="func-group clear" onclick="handleClear()">C</button>
+    
+    <!-- Mathematical Functions -->
+    <button class="func-group" onclick="handleClick('sqrt(')">√</button>
+    <button class="func-group" onclick="handleClick('log(')">log</button>
+    <button class="func-group" onclick="handleClick('sin(')">sin</button>
+    <button class="func-group" onclick="handleClick('cos(')">cos</button>
+    <button class="func-group" onclick="handleClick('tan(')">tan</button>
+    
+    <!-- Number Buttons -->
+    <button class="num-group number" onclick="handleClick('1')">1</button>
+    <button class="num-group number" onclick="handleClick('2')">2</button>
+    <button class="num-group number" onclick="handleClick('3')">3</button>
+    <button class="num-group" onclick="handleClick('*')">*</button>
+    <button class="num-group" onclick="handleClick('/')">/</button>
+    
+    <button class="num-group number" onclick="handleClick('4')">4</button>
+    <button class="num-group number" onclick="handleClick('5')">5</button>
+    <button class="num-group number" onclick="handleClick('6')">6</button>
+    <button class="num-group" onclick="handleClick('+')">+</button>
+    <button class="num-group" onclick="handleClick('-')">-</button>
+    
+    <button class="num-group number" onclick="handleClick('7')">7</button>
+    <button class="num-group number" onclick="handleClick('8')">8</button>
+    <button class="num-group number" onclick="handleClick('9')">9</button>
+    <button class="num-group" onclick="handleClick('.')">.</button>
+    <button class="num-group" onclick="handleClick('%')">%</button>
+    
+    <button class="num-group" onclick="handleClick('00')">00</button>
+    <button class="num-group" onclick="handleClick('0')">0</button>
+    <button class="span-3" onclick="calculateResult()">=</button>
+</div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

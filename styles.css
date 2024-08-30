@@ -1,0 +1,131 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #097894;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 35px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 30px 10px;
+  background-color: #499ca3;
+  color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.input {
+  font-size: 25px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.result {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 18px;
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button:active {
+  background-color: #ddd;
+}
+
+.span-3 {
+  grid-column: span 3;
+  background-color: #41a4ad;
+  color: white;
+}
+
+.number {
+  background: #cae6eb;
+}
+
+.clear {
+  background-color: #097894;
+  color: white;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  .calculator {
+      padding: 20px; 
+  }
+
+  .input {
+      font-size: 20px;
+  }
+
+  .result {
+      font-size: 24px; 
+  }
+
+  .buttons {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .span-3 {
+      grid-column: span 4; 
+  }
+}
+
+@media (max-width: 400px) {
+  .calculator {
+      padding: 15px; 
+  }
+
+  .input {
+      font-size: 16px; 
+  }
+
+  .result {
+      font-size: 20px; 
+  }
+
+  .buttons {
+      grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .span-3 {
+      grid-column: span 3; 
+  }
+
+  button{
+    padding: 10px;
+  }
+}
